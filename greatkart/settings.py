@@ -132,3 +132,19 @@ STATICFILES_DIRS = ['greatkart/static',]
 #media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /'media'
+
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    50: 'critical',
+}
+
+#smtp configuration 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='mail.swalaaviation.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'admin@swalaaviation.com'
+EMAIL_HOST_PASSWORD = '8P{,hapR^HMK1'
+EMAIL_USE_SSL = True
